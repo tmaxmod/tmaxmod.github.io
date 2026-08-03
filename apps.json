@@ -13,14 +13,7 @@
             "iconColor": "#1DB954",
             "banner": "linear-gradient(135deg, #1DB954, #1ed760)",
             "description": "Premium Fake GPS tool to instantly change your location. Includes an on-screen joystick, GPX support, and advanced route planning without any advertisements.",
-            "features": [
-                "Zero Ads",
-                "Advanced Route Management",
-                "On-Screen Joystick",
-                "Background Mode",
-                "GPX Import",
-                "Simulate Movement"
-            ],
+            "features": ["Zero Ads", "Advanced Route Management", "On-Screen Joystick", "Background Mode", "GPX Import", "Simulate Movement" ],
             "downloadUrl": "https://github.com/tmaxmod/tamxmod-tools/raw/refs/heads/main/Location%20Changer_3.50.apk",
             "telegramUrl": "https://t.me/tmaxmod"
         },
