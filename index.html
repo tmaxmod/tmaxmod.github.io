@@ -797,6 +797,9 @@
 <script>
 let appsData = [];
 let currentPage = 'home';
+const downloadIframe = document.createElement('iframe');
+downloadIframe.style.display = 'none';
+document.body.appendChild(downloadIframe);
 
 const categories = [
     { name: "Social", icon: "fa-users", color: "linear-gradient(135deg, #E4405F, #F77737)", count: 0, id: "social" },
@@ -1052,22 +1055,18 @@ function downloadApp(appId) {
     if (!app) return;
 
     showToast(`Starting download: ${app.name}`, 'success');
-    const iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    iframe.src = app.downloadUrl;
-    document.body.appendChild(iframe);
-    
-    setTimeout(() => {
-      /* showToast('Redirecting to Telegram for download...', 'info');
+    downloadIframe.src = app.downloadUrl;
+ /*   setTimeout(() => {
+       // showToast('Redirecting to Telegram for download...', 'info');
         const link = document.createElement('a');
         link.href = app.downloadUrl;
         link.setAttribute('download', '');
         link.target = '_blank';    
         document.body.appendChild(link);
         link.click();
-        document.body.removeChild(link);  */
-        document.body.removeChild(iframe);
-    }, 1500);
+        document.body.removeChild(link);  
+    }, 1500); */
+    
 }
 
 function showPage(pageName, fromPopstate) {
